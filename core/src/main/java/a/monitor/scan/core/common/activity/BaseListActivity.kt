@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.layout_base_list.*
 @Date:2020/9/8
 默认含有RecyclerView的可下拉刷新，上拉加载（可隐藏）Activity基类
  **/
-class BaseListActivity : BaseActivity() {
+open class BaseListActivity : BaseActivity() {
 
     override fun getLayoutId(): Int {
         return R.layout.layout_base_list
