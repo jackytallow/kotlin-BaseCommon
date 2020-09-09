@@ -70,4 +70,6 @@ dependencies {
     // Animators 扩展
     api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-animators:$adapterVersion"
 
+    api 'com.shuyu:GSYVideoPlayer:7.1.5'
+
 }

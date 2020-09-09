@@ -2,6 +2,7 @@ package a.monitor.scan.baseprogram.sorted
 
 import a.monitor.scan.baseprogram.R
 import android.widget.TextView
+import android.widget.Toast
 import com.julive.adapter.animators.firstAnimation
 import com.julive.adapter.animators.updateAnimation
 import com.julive.adapter.core.*
@@ -50,7 +51,6 @@ class SortedItemViewModelTest : LayoutViewModel<SortedModelTest>(R.layout.item_t
             itemView.setOnClickListener {
                 val vm = getViewModel<SortedItemViewModelTest>()
                 vm?.model?.subTitle = "刷新自己${Random.nextInt(100)}"
-                //getAdapter<SortedListAdapter>()?.set(adapterPosition, vm)
                 vm?.let { it1 -> getAdapter<SortedListAdapter>()?.set(adapterPosition, it1) }
             }
             onViewAttachedToWindow {
