@@ -60,4 +60,14 @@ dependencies {
     api 'com.squareup.retrofit2:converter-scalars:2.3.0'
     api 'com.squareup.okhttp3:okhttp:3.10.0'
     api 'com.alibaba:fastjson:1.2.47'
+
+    //核心库
+    api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-core:$adapterVersion"
+
+    // sortedlist 扩展
+    api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-sorted:$adapterVersion"
+
+    // Animators 扩展
+    api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-animators:$adapterVersion"
+
 }
