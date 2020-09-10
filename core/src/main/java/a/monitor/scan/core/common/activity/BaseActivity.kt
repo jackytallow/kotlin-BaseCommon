@@ -23,7 +23,7 @@ abstract class BaseActivity : AppCompatActivity(), AnkoLogger {
     /*
     获取布局
    */
-    protected abstract fun getLayoutId() : Int
+    protected abstract fun getLayoutId(): Int
 
     //初始化视图,子类实现
     protected open fun initView() {}
@@ -36,30 +36,29 @@ abstract class BaseActivity : AppCompatActivity(), AnkoLogger {
     protected open fun initData() {}
 
     //弹出toast，传入当前信息
-    protected open fun showToast(msg:String) {
-        runOnUiThread{
+    protected open fun showToast(msg: String) {
+        runOnUiThread {
             toast(msg)
         }
     }
 
     //弹出toast需要当前的资源
-    protected open fun showToast(stringRes:Int) {
+    protected open fun showToast(stringRes: Int) {
         runOnUiThread {
             toast(getString(stringRes))
         }
     }
 
     //跳转到另外的activity并且finish掉
-    inline fun <reified T: BaseActivity> startActivityAndFinish(vararg params: Pair<String, Any?>) {
+    inline fun <reified T : BaseActivity> startActivityAndFinish(vararg params: Pair<String, Any?>) {
         startActivity<T>(*params)
         finish()
     }
 
     //跳转到另外的activity
-    inline fun <reified T: BaseActivity> startForActivity(vararg params: Pair<String, Any?>) {
+    inline fun <reified T : BaseActivity> startForActivity(vararg params: Pair<String, Any?>) {
         startActivity<T>(*params)
     }
-
 
 
 }

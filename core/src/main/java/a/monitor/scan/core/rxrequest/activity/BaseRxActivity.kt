@@ -38,7 +38,7 @@ abstract class BaseRxActivity : BaseActivity(), LifecycleProvider<ActivityEvent>
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        lifecycleSubject.onNext(ActivityEvent.CREATE)
+        lifecycleSubject.onNext(ActivityEvent.CREATE) //记录当前生命周期
     }
 
     @CallSuper

@@ -46,6 +46,7 @@ class LoadMoreRecyclerView(context: Context, attrs: AttributeSet?, defStyle: Int
     fun addHeaderView(view: View) {
         mHeaderViews.put(mHeaderViews.size() + ITEM_TYPE_HEADER_INIT, view)
         mWrapAdapter.notifyDataSetChanged()
+        //mWrapAdapter.notifyDataSetChanged()
     }
 
     /**

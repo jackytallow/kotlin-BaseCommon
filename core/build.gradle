@@ -64,11 +64,17 @@ dependencies {
     //核心库
     api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-core:$adapterVersion"
 
+    // paging3 扩展
+    api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-paging:$adapterVersion"
+
     // sortedlist 扩展
     api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-sorted:$adapterVersion"
 
     // Animators 扩展
     api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-animators:$adapterVersion"
+
+    //data binding扩展
+    api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-binding:$adapterVersion"
 
     api 'com.shuyu:GSYVideoPlayer:7.1.5'
 

@@ -13,6 +13,7 @@ import com.julive.adapter.core.*
 import com.shuyu.gsyvideoplayer.GSYVideoManager
 import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+import kotlinx.android.synthetic.main.activity_array_list.*
 import kotlinx.android.synthetic.main.activity_video_list.*
 import org.jetbrains.anko.backgroundColorResource
 
@@ -116,6 +117,7 @@ class VideoActivity : BaseActivity() {
     override fun initListener() {
         var currentPlayingPosition = 0
 
+
         rv_list_video.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
@@ -124,6 +126,7 @@ class VideoActivity : BaseActivity() {
                         val position = rv_list_video.findFirstCompletelyVisibleItemPosition()
                         Log.d("ScrollChange", "position:$position")
                         if (currentPlayingPosition != position) {
+                            currentPlayingPosition = position
                             currentPlayingPosition = position
                             mListAdapter.notifyItemChanged(position, 1)
                         }
@@ -135,6 +138,10 @@ class VideoActivity : BaseActivity() {
 
         rv_list_video.postDelayed({
             mListAdapter.notifyItemChanged(currentPlayingPosition,1)
+        },1000)
+
+        rv_list_video.postDelayed({
+            mListAdapter.notifyItemChanged(currentPlayingPosition,2)
         },1000)
     }
 

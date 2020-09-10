@@ -17,6 +17,9 @@ object DensityUtil {
     }
 
 
+    fun px2dip2(px:Float): Int {
+        return (px/ density).toInt()
+    }
     /**
      * px转换为dip
      */

@@ -1,16 +1,35 @@
 package a.monitor.scan.baseprogram
 
+import a.monitor.scan.baseprogram.sorted.SortedActivity
+import a.monitor.scan.baseprogram.video.VideoActivity
 import a.monitor.scan.core.common.activity.BaseActivity
-import a.monitor.scan.core.common.activity.BaseListActivity
-import a.monitor.scan.core.rxrequest.activity.BaseRxActivity
-import a.monitor.scan.core.rxrequest.activity.BaseRxListActivity
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseListActivity() {
+
+class MainActivity : BaseActivity() {
+
+
+
 
     override fun getLayoutId(): Int {
         return R.layout.activity_main
     }
+
+    override fun initListener() {
+        sortList.setOnClickListener {
+            startForActivity<SortedActivity>()
+        }
+
+
+        videoList.setOnClickListener {
+            startForActivity<VideoActivity>()
+        }
+
+
+
+
+    }
+
+
 
 }

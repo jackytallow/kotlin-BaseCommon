@@ -30,19 +30,14 @@ class ClassicalFooter @JvmOverloads constructor(context: Context, attrs: Attribu
         val root = LinearLayout(context)
         root.orientation = LinearLayout.HORIZONTAL
         root.gravity = Gravity.CENTER
-        addView(root, FrameLayout.LayoutParams.MATCH_PARENT, DensityUtil.dip2px(50))
-        (root.layoutParams as FrameLayout.LayoutParams).gravity = Gravity.CENTER
+        addView(root, LayoutParams.MATCH_PARENT, DensityUtil.dip2px(50))
+        (root.layoutParams as LayoutParams).gravity = Gravity.CENTER
         arrawImg = ImageView(context)
-//        arrawImg.layoutParams = LayoutParams(50,50)
-//        arrawImg.padding = 5
-//        arrawImg.setImageResource(R.drawable.ic_loading)
-//        arrawImg.scaleType = ImageView.ScaleType.CENTER
-//        root.addView(arrawImg)
         textTitle = TextView(context)
         textTitle.textSize =16f
         textTitle.text = "上拉或点击加载更多..."
         textTitle.setTextColor(Color.parseColor("#999999"))
-        val params = LinearLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+        val params = LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
         params.leftMargin = 20
         root.addView(textTitle, params)
         rotateAnimation.duration = 800

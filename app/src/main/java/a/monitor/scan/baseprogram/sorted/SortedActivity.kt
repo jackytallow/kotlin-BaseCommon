@@ -31,12 +31,14 @@ class SortedActivity : BaseActivity() {
         supportActionBar?.title = "SortedListAdapter"
         mSortedListAdapter.into(
             rv_list,
-            LinearLayoutManager(this)
+            GridLayoutManager(this,3)
+            //LinearLayoutManager(this)
         )
 
         rv_list.setItemViewCacheSize(0)
         (0..10).map {
             mSortedListAdapter.add(SortedItemViewModelTest().apply {
+
                 model = SortedModelTest(it,"标题$it", "副标题$it")
             })
         }
@@ -45,7 +47,7 @@ class SortedActivity : BaseActivity() {
     override fun initListener() {
         var index = 100
         btn_left.setText("新增").setOnClickListener {
-            // 要想根据uniqueId更新数据，需要调用updateItem方法
+            //要想根据uniqueId更新数据，需要调用updateItem方法
             mSortedListAdapter.add(SortedItemViewModelTest().apply {
                 model = SortedModelTest(index++, "标题$index", "新增$index")
             })
