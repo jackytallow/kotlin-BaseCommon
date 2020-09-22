@@ -70,6 +70,8 @@ dependencies {
     // sortedlist 扩展
     api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-sorted:$adapterVersion"
 
+
+
     // Animators 扩展
     api "com.github.ibaozi-cn.RecyclerViewAdapter:adapter-animators:$adapterVersion"
 

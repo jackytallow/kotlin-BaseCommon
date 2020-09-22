@@ -45,6 +45,7 @@ class VideoActivity : BaseActivity() {
             (0..10).forEach { _ ->
                 add(
 
+                    //使用dsl的xml格式文件进行封装
                     layoutViewModelDsl(
                         R.layout.item_test_video_view,
                         ModelVideoTest(mp4_b, mp4_a, -1)
@@ -126,7 +127,6 @@ class VideoActivity : BaseActivity() {
                         val position = rv_list_video.findFirstCompletelyVisibleItemPosition()
                         Log.d("ScrollChange", "position:$position")
                         if (currentPlayingPosition != position) {
-                            currentPlayingPosition = position
                             currentPlayingPosition = position
                             mListAdapter.notifyItemChanged(position, 1)
                         }

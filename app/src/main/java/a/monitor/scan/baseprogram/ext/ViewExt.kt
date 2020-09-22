@@ -36,12 +36,12 @@ class CardButtonView : FrameLayout {
 
 }
 
-inline fun Context.cardView(): CardView = cardView() {}
+inline fun Context.cardView(): CardView = cardView {}
 inline fun Context.cardView(init: CardView.() -> Unit = {}): CardView {
     return ankoView({ CardView(it) }, theme = 0, init = init)
 }
 
-inline fun ViewManager.cardView(): CardView = cardView() {}
+inline fun ViewManager.cardView(): CardView = cardView {}
 inline fun ViewManager.cardView(init: CardView.() -> Unit = {}): CardView {
     return ankoView({ CardView(it) }, theme = 0, init = init)
 }

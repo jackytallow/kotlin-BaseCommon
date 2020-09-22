@@ -53,7 +53,7 @@ class HttpConfig : HttpConfigProxy() {
 
     private var mOkHttpClientBuilder: OkHttpClient.Builder? = null
 
-    //
+    //HttpConfig
     override var baseUrl: String = mBaseUrl
 
     override var baseUrls: Map<String, String>
@@ -69,7 +69,7 @@ class HttpConfig : HttpConfigProxy() {
                 urls[GANK_URL] = mGankUrl
             }
             return urls
-        }
+    }
 
     override suspend fun <T> parseResponseData(responseData: Deferred<BaseResponse<T>>): T? {
         try {
@@ -83,7 +83,6 @@ class HttpConfig : HttpConfigProxy() {
         } catch (e: Throwable) {
             var errMsg = "网络异常"
             when (e) {
-                is UnknownHostException -> errMsg = "连接失败"
                 is ConnectException -> errMsg = "连接失败"
                 is SocketTimeoutException -> errMsg = "连接超时"
                 is InterruptedIOException -> errMsg = "连接中断"
