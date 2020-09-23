@@ -1,41 +1,16 @@
 package a.monitor.scan.baseprogram
 
-import a.monitor.scan.baseprogram.activity.GankActivity
-import a.monitor.scan.baseprogram.sorted.SortedActivity
-import a.monitor.scan.baseprogram.video.VideoActivity
-import a.monitor.scan.core.common.activity.BaseActivity
-import android.content.Intent
-import kotlinx.android.synthetic.main.activity_main.*
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
+/**
+@author:jacky
+@Date:2020/9/22
+ **/
+class MainActivity : AppCompatActivity() {
 
-class MainActivity : BaseActivity() {
-
-
-
-
-    override fun getLayoutId(): Int {
-        return R.layout.activity_main
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
     }
-
-    override fun initListener() {
-        sortList.setOnClickListener {
-            startForActivity<SortedActivity>()
-        }
-
-
-        videoList.setOnClickListener {
-            startForActivity<VideoActivity>()
-        }
-
-        base_url.setOnClickListener {
-            startActivity(Intent(this, GankActivity::class.java))
-        }
-
-
-
-
-    }
-
-
-
 }

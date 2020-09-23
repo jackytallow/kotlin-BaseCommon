@@ -25,11 +25,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".sorted.SortedActivity"/>
-
-        <activity android:name=".video.VideoActivity"/>
-
-        <activity android:name=".activity.GankActivity"/>
     </application>
 
 </manifest>
